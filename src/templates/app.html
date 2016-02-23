@@ -1,0 +1,29 @@
+<body id="page-top">
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 style="font-size: 64.3333px; color: #7DA5F2">Press New Game To Start !</h1>
+                <hr>
+
+								<div class="row">
+									<div class="container">
+										<div style="letter-spacing: 4px; font-size: 70px;" class="col-md-7 col-sm-7">
+											<br>{{codedHangmanWord}}<br>
+										</div>
+
+										<div style="font-size:51px" class="col-md-2"> {{health}} Health LEFT ! </div>
+										<button (click) = "onNewGameBtn()" class="btn btn-warning col-sm-12 col-sm-12">New Game</button>
+									</div>
+								</div>
+								<br><br>
+								<div class="row">
+									<div class="container">
+										<button (click)= "checkLetter(item);"  class = "btn btn-primary" *ngFor="#item of allGuessChars">
+										 <alphabet-renderer [item]="item"></alphabet-renderer>
+										</button>
+									</div>
+								</div>
+            </div>
+        </div>
+    </header>
+</body>
